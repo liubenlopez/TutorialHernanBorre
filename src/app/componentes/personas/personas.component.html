@@ -1,0 +1,12 @@
+<div>
+    <button (click)="mostrarFormAgregarPersona()" style="float: right; margin-top: 3px;">Agregar Persona</button>
+    <h3>Esta es nuestra lista de personas:</h3>
+    <hr>
+    <div *ngFor="let persona of personas">
+        <app-persona [personaComp]="persona" (deletePersona)="borrarPersonaDeLista($event)"></app-persona>
+    </div>
+</div>
+
+<div *ngIf="mostrarFormAgregarPersonaVar" style="position: absolute; right: 8px; top: 108px; background: white; border: 1px solid #7e7e7e; padding: 10px;">
+    <app-persona-form (agregarPersona)="agregarPersona($event)"></app-persona-form>
+</div>

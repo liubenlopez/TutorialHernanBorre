@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="personaComp.nombre">
+<p>Nombre: {{personaComp.nombre}}</p>
+<p>Apellido: {{personaComp.apellido}}</p>
+<p>Edad: {{personaComp.edad}}</p>
+<button (click)="festejar(personaComp)">Cumplir Años</button>
+<button (click)="restarEdad(personaComp)">Restar Años</button>
+<button (click)="eliminarPersona(personaComp)">Borrar Persona</button>
+<hr>
